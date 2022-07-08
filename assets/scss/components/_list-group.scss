@@ -1,0 +1,225 @@
+.list-group {
+  margin: 0 1.5rem;
+  .list-group-item {
+    font-size: 1.8rem;
+    padding: 2.5rem 1rem;
+    background-color: transparent;
+    &-inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    span {
+      color: $list-light-text;
+    }
+    strong {
+      color: $list-dark-text;
+    }
+  }
+}
+// custom border
+.list-group-flush > .list-group-item {
+  border-width: 0 0 3px;
+  border-color: $gray-light;
+  // &:last-child {
+  //   border-width: 0 0 3px;
+  // }
+}
+// pdf-list
+.pdf-list {
+  background: $gray-light;
+  border-radius: 0;
+  margin-top: 2rem;
+  &-wrap {
+    min-height: 30rem;
+    height: 32rem;
+    overflow-y: auto;
+    padding: 1.7rem 2rem 3rem 2rem;
+    @include custom-scroll-bar();
+  }
+  &-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    margin-bottom: 0.4rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    &--title {
+      color: $white;
+      @include d-flex-align-center();
+      .pdf-list-item--dot {
+        width: 1.24rem;
+        height: 1.24rem;
+        border-radius: 50%;
+        background-color: $primary-bg;
+        margin-right: 1.5rem;
+      }
+    }
+    &--doc {
+      background-color: $white;
+      border-radius: 50%;
+      padding: 0.2rem 0.3rem 0.4rem 0.4rem;
+    }
+  }
+  &-tag {
+    background: $gray-light;
+    // border-radius: 0px 0px 1.5rem 1.5rem;
+    padding: 0.5rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    &-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      p {
+        margin-right: 1.5rem;
+        line-height: 3.4rem;
+        color: $btn-link;
+      }
+      span {
+        width: 9.6rem;
+        height: 0.5rem;
+        background: #0b24fb;
+        border-radius: 0;
+      }
+    }
+  }
+}
+@each $color, $value in $theme-colors {
+  .pdf-#{$color} {
+    @include pdf-list-variant($value);
+  }
+}
+.list-group-basic {
+  .list-group-item {
+    p {
+      font-size: 2.4rem;
+      color: $primary-bg;
+    }
+    strong {
+      font-size: 2.4rem;
+      font-weight: 850;
+      color: $list-dark-text;
+    }
+  }
+}
+
+@include breakpoint("ipad-max") {
+  .list-group {
+    margin: 0;
+    .list-group-item {
+      font-size: 1.5rem;
+    }
+  }
+  .pdf-list {
+    &-wrap {
+      padding: 1.7rem 1rem 3rem;
+      .pdf-list-item {
+        &--title {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    &-tag {
+      &-list {
+        span {
+          width: 4rem;
+        }
+      }
+    }
+  }
+  .list-group-basic {
+    .list-group-item {
+      p {
+        font-size: 1.4rem;
+      }
+      strong {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+@include breakpoint("mobile-max") {
+  .list-group {
+    .list-group-item {
+      padding: 1.5rem 1rem;
+      &-inner {
+        :not(last-child) {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+  .pdf-list {
+    &-wrap {
+      .pdf-list-item {
+        &--title {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+// rtl
+[direction="rtl"] {
+  .pdf-list {
+    &-item {
+      &--title {
+        .pdf-list-item--dot {
+          margin-left: 1.5rem;
+          margin-right: 0;
+        }
+      }
+    }
+    &-tag {
+      &-list {
+        p {
+          margin-right: 0;
+          margin-left: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+[theme-version="dark"] {
+  .list-group {
+    .list-group-item {
+      span {
+        color: $dark-link;
+      }
+      strong {
+        color: $dark-list-text;
+      }
+    }
+  }
+  .list-group-basic {
+    .list-group-item {
+      p {
+        color: $dark-link;
+      }
+    }
+  }
+  .pdf-list {
+    background: $dark-body-bg;
+    &-tag {
+      background: $dark-body-bg;
+      border-top: 1px solid $dark-border-color;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.btn {
+  font-size: $btn-font-size;
+  border-radius: 0;
+  border: 0;
+  padding: $btn-padding-y $btn-padding-x;
+  // min-width: $btn-min-width;
+  line-height: 1.5;
+  &.btn-sm {
+    font-size: $btn-font-size-sm;
+    border-radius: 0;
+  }
+  &.btn-lg {
+    font-size: $btn-font-size-lg;
+    padding: $btn-padding-y-lg $btn-padding-x-lg;
+  }
+  &.btn-xs {
+    padding: $btn-padding-y-xs $btn-padding-x-xs;
+    font-size: $btn-font-size-xs;
+  }
+  &.btn-light {
+    background-color: $btn-grey;
+    color: $white;
+  }
+  &.btn-grey {
+    background-color: $white;
+    color: $btn-link;
+  }
+  &.btn-white {
+    background-color: $white;
+    color: $btn-grey-light;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value);
+  }
+}
+@include breakpoint("ipad-max") {
+  .btn {
+    &.btn-lg {
+      padding: $btn-padding-y $btn-padding-x;
+      font-size: $btn-font-size;
+    }
+  }
+}
+.btn-toggle {
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+  }
+  .btn-default {
+    background-color: #e7ebee;
+  }
+}
+.btn-primary {
+  background: $btn-primary-color;
+  // color: #fff;
+}
+.btn-outline-primary {
+  background-color: transparent;
+  border: 2px solid $btn-sec-color;
+  color: $white;
+  padding: 1.2rem 4rem;
+  &:hover {
+    background-color: $btn-sec-color;
+    border: 2px solid $btn-sec-color;
+    color: $btn-primary-color;
+  }
+}
+.btn-border-primary {
+  border: 2px solid $btn-primary-color;
+  color: $btn-primary-color;
+  &:hover {
+    background-color: $btn-primary-color;
+    color: $white;
+  }
+}
+// rtl
+[direction="rtl"] {
+  .btn {
+    line-height: 1;
+  }
+}

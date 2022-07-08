@@ -1,0 +1,216 @@
+/* Cards */
+
+.card {
+  margin-bottom: 3rem;
+  box-shadow: $card-box-shadow;
+  -webkit-box-shadow: $card-box-shadow;
+  -moz-box-shadow: $card-box-shadow;
+  -ms-box-shadow: $card-box-shadow;
+  -o-transition: background $action-transition-duration
+    $action-transition-timing-function;
+  transition: background $action-transition-duration
+    $action-transition-timing-function;
+  -webkit-transition: background $action-transition-duration
+    $action-transition-timing-function;
+  -moz-transition: background $action-transition-duration
+    $action-transition-timing-function;
+  -ms-transition: background $action-transition-duration
+    $action-transition-timing-function;
+  border: none;
+  border-radius: $card-border-radius;
+  
+  &.card-rounded {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+  }
+  &.transparent {
+    background: transparent;
+  }
+  .card-body {
+    padding: $card-padding-y $card-padding-x;
+  }
+  .card-title {
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    font-size: 2.8rem;
+    font-weight: bold;
+    // color: $btn-grey-light;
+  }
+  .card-subtitle {
+    font-size: 1.8rem;
+    color: $page-title-text;
+  }
+}
+//card title with dropdown menu
+.card-outer-title {
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+// card bg img
+.citc-bg {
+  background-image: url("#{$images-path}/web/CITC-PROPERTY-RGB.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 10% bottom;
+}
+.right-card-citc-logo {
+  background-image: url("#{$images-path}/web/right-card-bg.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// different card type
+.close-card {
+  .card-title {
+    font-size: 2.6rem;
+  }
+  .card-body {
+    padding:2.5rem;
+  }
+  .card-close-btn {
+    background-color: $btn-link;
+    border: 0;
+    // border-radius: 0rem 1.5rem 0rem 0rem;
+    float: none;
+    height: 4.8rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4.8rem;
+    line-height: 4.8rem;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+    i {
+      font-size: 3.5rem;
+      color: $white;
+    }
+  }
+  .inner-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    h3 {
+      font-weight: 900;
+      font-size: 2.6rem;
+      color: $btn-grey-light;
+      padding: 0 2rem;
+    }
+    img {
+      max-width: 15rem;
+    }
+  }
+}
+.details-card {
+  background: rgba(1, 7, 96, 0.06);
+  border-radius: 0;
+  padding: 2.5rem 3rem;
+  margin-bottom: 1.5rem;
+  &-list {
+    margin-bottom: 2.5rem;
+    font-size: 2.4rem;
+    font-weight: 850;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    span {
+      color: $btn-grey-light;
+    }
+    strong {
+      color: $list-dark-text;
+    }
+  }
+}
+@include breakpoint(ipad-max) {
+  .card {
+    .card-body {
+      padding: 2rem 1.5rem;
+    }
+    .card-title {
+      font-size: 1.5rem;
+      span.badge {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .details-card {
+    padding: 1.5rem 1rem;
+    &-list {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  .close-card {
+    .card-close-btn {
+      height: 2.8rem;
+      width: 2.8rem;
+      line-height: 2.8rem;
+      i {
+        font-size: 2.5rem;
+      }
+    }
+    .inner-header {
+      h3 {
+        font-size: 2rem;
+        padding: 0 1rem;
+      }
+      img {
+        max-width: 5rem;
+      }
+    }
+  }
+}
+@include breakpoint(mobile-max) {
+  .close-card {
+    .inner-header {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+@include breakpoint(custom-small-mobile-max) {
+  .close-card {
+    .inner-header {
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+[direction="rtl"] {
+  .right-card-citc-logo {
+    background-position: left;
+  }
+  // close card
+  .close-card {
+    .card-close-btn {
+      left: 0;
+      right: auto;
+      // border-radius: 1.5rem 0 0 0;
+    }
+  }
+}
+
+[theme-version="dark"] {
+  .card {
+    background-color: $dark-primary-1;
+  }
+  .close-card .inner-header h3 {
+    color: $white;
+  }
+  .citc-bg {
+    background-position: 100% bottom;
+  }
+}

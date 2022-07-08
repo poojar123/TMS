@@ -1,0 +1,25 @@
+[theme-version="dark"] {
+  .header {
+    background-color: $navbar-light-color;
+    .top-bar {
+      background-color: $dark-primary-1;
+      .language-convert-select {
+        background-color: $dark-primary-1;
+        color: $navbar-light-color;
+      }
+      .navbar-nav {
+        .nav-link {
+          color: $navbar-light-color;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .top-bar {
+    #top-bar_wrap {
+      background-color: $dark-primary-1;
+    }
+  }
+}

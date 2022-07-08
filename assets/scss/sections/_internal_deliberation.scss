@@ -1,0 +1,43 @@
+.internal_deliberation-wrap {
+  background-color: #f0f0f5;
+  padding: 0 2.25rem;
+  height: 100%;
+  height: 65rem;
+  min-height: 70rem;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+  @include custom-scroll-bar();
+  &_list {
+    padding: 1.875rem 0;
+    &-item {
+      padding: 4rem 2.25rem 3rem;
+      width: 75%;
+      color: $white;
+      margin-bottom: 2rem;
+      @include breakpoint("ipad-max") {
+        width: 90%;
+        padding: 2rem;
+      }
+      &.send {
+        background-color: $info;
+      }
+      &.reply {
+        background-color: $secondary;
+        margin-left: auto;
+      }
+      &_user-info {
+        text-align: end;
+        span {
+          color: rgba(255, 255, 255, 0.75);
+        }
+      }
+    }
+  }
+}
+
+[direction="rtl"] {
+  .internal_deliberation-wrap_list-item.reply {
+    margin-right: auto;
+    margin-left: unset;
+}
+}

@@ -1,0 +1,14 @@
+[theme-version="dark"] {
+  footer {
+    background-color: $dark-primary-1;
+    .footer-wrap .footer-link .navbar-nav .nav-link {
+      color: $navbar-light-color;
+      &:hover {
+        color: $white;
+      }
+    }
+    .copyright p {
+      color: $navbar-light-color;
+    }
+  }
+}

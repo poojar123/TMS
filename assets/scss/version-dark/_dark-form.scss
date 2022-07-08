@@ -1,0 +1,12 @@
+[theme-version="dark"] {
+    .form-control {
+        background-color: $dark-body-bg;
+        border-color: $dark-border-color;
+        color: $white;
+    }
+    .search-area{
+        .form-control{
+            color: $input-placeholder-color;
+        }
+    }
+}

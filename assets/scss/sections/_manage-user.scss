@@ -1,0 +1,31 @@
+.manage_search-wrap {
+  padding: 2.5rem 0;
+  .form-control-feedback {
+    color: rgba(0, 0, 0, 0.25);
+    display: block;
+    height: auto;
+    line-height: 5.9rem;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    width: 6rem;
+    z-index: 2;
+  }
+  .form-control {
+    padding-left: 5rem;
+  }
+}
+.manage_search-checkboxs {
+    margin-top: 2rem;
+  .form-check {
+    //   .form-check-label{
+    //       line-height: 1;
+    //   }
+    .form-check-input {
+      background-color: #cecece;
+      &:checked {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}

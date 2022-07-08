@@ -1,0 +1,58 @@
+[theme-version="dark"] {
+  background-color: $dark-body-bg;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $navbar-light-color;
+  }
+  .text-blue {
+    color: $navbar-light-color !important;
+  }
+  .text-dark {
+    color: $dark-list-text !important;
+  }
+  .page-titles h4.primary {
+    color: $navbar-light-color;
+  }
+  .link-dark {
+    color: $dark-list-text !important;
+  }
+}
+
+// css
+.language-convert .nav-link {
+  padding: 1rem;
+}
+.language-convert .language-convert-select {
+  padding: 0;
+}
+
+// dark
+[theme-version="dark"] .report-select_wrap .form-control {
+  background-color: #1e2746;
+}
+[theme-version="dark"] .report-select_wrap .form-group select {
+  background-color: #1e2746;
+  border-color: #333a54;
+  color: #fff;
+}
+
+// dark mode
+// [theme-version="dark-mode"] {
+//   filter: grayscale(100%) contrast(100%);
+//   -webkit-filter: grayscale(100%) contrast(100%);
+// }
+
+[theme-version="dark-mode"] {
+  filter: grayscale(100%);
+}
+[theme-version="dark-mode"].modal-open {
+  overflow-y: unset !important;
+  overflow-x: hidden !important;
+}
+[theme-version="dark-mode"] .modal-backdrop {
+  height: 100% !important;
+}

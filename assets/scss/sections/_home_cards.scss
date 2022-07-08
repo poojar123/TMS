@@ -1,0 +1,151 @@
+.animated-card {
+  width: 100%;
+  height: 250px;
+  @include boxshadow();
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+  text-align: center;
+  background-color: $white;
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $dark-blue;
+    right: 0;
+    bottom: -250px;
+    border-radius: 0px;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border: 2px solid $dark-blue;
+  }
+  &:hover {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+    background-position: center -215px;
+    &:before {
+      bottom: 0;
+    }
+    img,
+    .animated-card_count {
+      margin-top: -100px;
+      opacity: 0;
+    }
+    h3 {
+      color: #fff;
+      margin: 30px 0;
+    }
+    .btn {
+      -webkit-transition-delay: 0.9s;
+      -o-transition-delay: 0.9s;
+      transition-delay: 0.9s;
+      opacity: 1;
+      margin-top: 10px;
+    }
+  }
+  img {
+    display: block;
+    margin: 50px auto 0;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 120px;
+    height: auto;
+    position: relative;
+    opacity: 1;
+  }
+  .animated-card_count {
+    display: block;
+    margin: 50px auto 0;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    height: 120px;
+    position: relative;
+    opacity: 1;
+    color: $dark-blue;
+    font-size: 9.5rem;
+    font-weight: 850;
+    line-height: 16.4rem;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-top: 40px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: $dark-blue;
+    position: relative;
+  }
+  .btn {
+    position: relative;
+    border: 1px solid $secondary-color;
+    opacity: 0;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    color: $secondary-color;
+    &:hover {
+      -webkit-transition-delay: 0s !important;
+      -o-transition-delay: 0s !important;
+      transition-delay: 0s !important;
+      color: #fff;
+      background-color: $secondary-color;
+    }
+  }
+  &_img {
+    height: 120px;
+  }
+  .animated-card__inner {
+    position: absolute;
+    width: 100%;
+    height: 71px;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    bottom: 0;
+  }
+  .message-number {
+    color: $white;
+    font-size: 2.2rem;
+    font-weight: 900;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    line-height: 1.2;
+    height: auto;
+    width: auto;
+    padding: 0.2rem 1rem 0.5rem 1rem;
+    border-radius: 90px;
+    &.danger {
+      background: $red;
+    }
+  }
+}
+
+[theme-version="dark"] {
+  .animated-card {
+    background-color: $dark-primary-1;
+    &:before {
+      background-color: $dark-primary-1;
+      border-color: $dark-light-text;
+    }
+    .animated-card_count {
+      color: $dark-light-text;
+    }
+    h3 {
+      color: $dark-light-text;
+    }
+  }
+}

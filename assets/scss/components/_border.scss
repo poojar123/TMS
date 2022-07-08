@@ -1,0 +1,6 @@
+// border
+@each $color, $value in $theme-colors {
+  .border-#{$color} {
+    @include bordercolor($value) ;
+  }
+}

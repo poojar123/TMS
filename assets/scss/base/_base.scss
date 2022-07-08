@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+::-moz-selection {
+  color: $white;
+  background: $primary;
+}
+::selection {
+  color: $white;
+  background: $primary;
+}
+html {
+  font-size: 7px; //1rem = 8px
+  -webkit-transition: 0.3s all ease-in;
+  -o-transition: 0.3s all ease-in;
+  transition: 0.3s all ease-in;
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+  font-weight: initial;
+  line-height: 1.5;
+  background-color: $body-bg;
+  font-size: $default-font-size;
+  @include custom-scroll-bar();
+}
+
+

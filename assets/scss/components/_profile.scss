@@ -1,0 +1,19 @@
+.profile-details {
+  &-occupation {
+    font-size: 2.6rem;
+    color: $profile-occupation-color;
+    font-weight: 850;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  &-details {
+    font-size: 1.8rem;
+  }
+}
+[theme-version="dark"] {
+  .profile-details {
+    &-details {
+      color: $navbar-light-color;
+    }
+  }
+}

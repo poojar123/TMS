@@ -1,0 +1,84 @@
+// view log popup
+#view-log-model {
+  .modal-body {
+    padding: 5rem;
+  }
+  .btn-box {
+    background: $gray-light;
+    padding: 4rem 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-radius: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    a {
+      max-width: 25rem;
+      width: 100%;
+    }
+  }
+}
+
+#amendment-on-agreement-model {
+  .model-bottom {
+    @include d-flex-align-justify-space-between();
+    padding: 2rem 0;
+    .upload-text {
+      font-size: 1rem;
+      color: $primary-bg;
+      span {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+.modal-inner-con {
+  background: $gray-light;
+  padding: 4rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  a {
+    max-width: 27rem;
+    width: 100%;
+  }
+}
+
+@include breakpoint(ipad-max) {
+  #amendment-on-agreement-model {
+    .model-bottom {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@include breakpoint(mobile-max) {
+  #view-log-model {
+    .modal-body {
+      padding: 2rem;
+    }
+  }
+}
+[theme-version="dark"] {
+  #view-log-model {
+    .btn-box {
+      background: $dark-primary-1;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+main {
+  @include transition(all, 0.2s, ease);
+  min-height: calc(100vh - 30rem);
+  padding: 3rem 0;
+}
+
+@include breakpoint("ipad-max") {
+  main {
+    min-height: calc(100vh - 10rem);
+  }
+}

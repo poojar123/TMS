@@ -1,0 +1,188 @@
+// COLOR
+
+$colors: (
+  light: rgba(0, 0, 0, 0.5),
+  gray-light: rgba(0, 0, 0, 0.75),
+  blue-light: rgba(1, 7, 96, 0.75),
+);
+$theme-colors: (
+  "primary": #485bfc,
+  "secondary": #24d3fd,
+  "success": #70b603,
+  "info": #5e29d2,
+  "warning": #e1a714,
+  "dark-warning": #b8741a,
+  "danger": #d9001b,
+  "light": #fbfbfb,
+  "dark": #1e283d,
+  "black": #000000,
+);
+
+$primary: #0000ff;
+$secondary: #24d3fd;
+$success: #70b603;
+$info: #5e29d2;
+$warning: #e1a714;
+$dark-warning: #b8741a;
+$danger: #d9001b;
+$light: #fbfbfb;
+$dark: #1e283d;
+$black: #000000;
+// other color
+$dark-blue: #000062;
+$white: #fff !default;
+// $gray-light: rgba(1, 7, 96, 0.06);
+$gray-light: #f1f0f6;
+$primary-bg: #010760;
+$secondary-color: #49c1ed;
+$body-bg: #f8f8f8;
+// $body-bg: #edeeff;
+$red: #ff0000;
+$btn-link: #0b24fb;
+$primary-light-bg: #0b24fb;
+$blue-light: rgba(1, 7, 96, 0.75);
+// Fonts
+// $primary-font: "Loew Next Arabic";
+$primary-font: Loew Next Arabic, sans-serif;
+
+$default-font-size: 1.8rem; // 18px as base font size
+
+// $secondary-font: ;
+// $base-size: 1rem;
+// :root {
+//   // --data-color-primary: #{$primary};
+//   // --data-color-secondary: #{$secondary};
+//   --base-size: $base-size;
+// }
+// font
+$extra-small-font-size: 1.2rem;
+$small-font-size: 1.4rem;
+$medium-font-size: 1.6rem;
+$large-font-size: 2rem;
+$extra-large-font-size: 2.2rem;
+$xl-large-font-size: 2.4rem;
+$xxl-large-font-size: 2.6rem;
+
+// path
+$images-path: "../img" !default;
+
+//fonts Path
+$fonts-path: "../fonts" !default;
+// icomoon
+
+// card
+// $card-box-shadow:0 2px 6px 0 rgba(0 0 0 / 5%);
+$card-box-shadow:none;
+$card-spacing-y: 2.5rem;
+$card-padding-y: 2.5rem;
+$card-padding-x: 2.5rem;
+$action-transition-duration: 0.25s;
+$action-transition-timing-function: ease;
+$card-border-radius: 0; // out of design
+
+// button
+$btn-grey: #ababab;
+$btn-grey-light: rgba(0, 0, 0, 0.75);
+$btn-padding-y: 1.5rem;
+$btn-padding-x: 4rem;
+$btn-line-height: 1;
+$btn-min-width: 22rem;
+
+$btn-padding-y-xs: 0.5rem;
+$btn-padding-x-xs: 0.75rem;
+
+$btn-padding-y-sm: 0.5rem;
+$btn-padding-x-sm: 0.81rem;
+
+$btn-padding-y-lg: 2rem;
+$btn-padding-x-lg: 4rem;
+$btn-font-size: 1.8rem;
+$btn-font-size-xs: 0.625rem;
+$btn-font-size-sm: 0.812rem;
+$btn-font-size-lg: 2.8rem;
+
+$btn-primary-color: #010064;
+$btn-sec-color: #01d2fb;
+
+// FORMS
+$input-bg: #f1f0f6; // out of design
+$input-text-color: rgba(0, 0, 0, 0.75);
+$input-border-radius: 0; // out of design
+// $input-placeholder-color: rgba(0, 0, 0, 0.5);
+$input-placeholder-color: #7f7cab;
+$input-font-size: 1.6rem;
+
+$input-padding-y: 1.6rem;
+$input-padding-x: 2.3rem;
+$input-line-height: 1;
+
+$input-height: 2.975rem;
+
+// TABLE
+$table-text-color: #010760;
+// $table-text-color-grey: #808080;
+$table-text-color-grey: #7f7cab;
+$table-text-action-color: #0b24fb;
+$table-cell-padding: 1.8rem 1.8rem;
+// POPUP
+$popup-close-btn-color: #0b24fb;
+$popup-border-radius: 10px;
+$popup-padding-y: 2.25rem;
+$popup-padding-x: 5rem;
+$popup-form-bg: #f1f0f6; // out of design
+$popup-form-title-color: rgba(0, 0, 0, 0.75);
+
+// pagination
+$pagination-color: #010064;
+
+// Tab
+$button-group-tab: #010760;
+$tab-link-color: #00d0fb;
+
+// accordion
+$accordion-header-color: #404040;
+$accordion-border-radius: 0;
+
+// accordion icon
+$accordion-icon-bg-color: #e9ebff;
+
+// timeline
+$timeline-bg: #0b24fb;
+
+// authentication
+$authentication-wrap: #f1f0f6; // out of design
+$login-wrap: #0b24fb;
+
+// list group
+$list-light-text: rgba(0, 0, 0, 0.5);
+$list-dark-text: rgba(1, 7, 96, 0.75);
+$profile-occupation-color: rgba(0, 0, 0, 0.75);
+
+// breadcrumb & page title
+$page-title-text: rgba(0, 0, 0, 0.5);
+
+// divideer line
+$line-color: rgba(0, 0, 0, 0.25);
+
+// inbox
+$mail-list-border: rgba(11, 36, 251, 0.75);
+$heading-color: #0001fe;
+
+// regulatory-document
+$regulatory-document:#8095fc;
+
+// dark mode
+$dark-body-bg: #181f39;
+$dark-primary-1: #1e2746;
+$dark-link: #b3b3b3;
+
+$dark-border-color: #333a54;
+
+$dark-light-text: rgba($white, 0.5) !default;
+
+$navbar-light-color: rgba($white, 0.8) !default;
+
+// list group
+$dark-list-text: #828690;
+
+// [theme-version="dark"] {}

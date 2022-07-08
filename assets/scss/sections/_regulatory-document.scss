@@ -1,0 +1,200 @@
+.regulatory-document {
+  &_title {
+    @include d-flex-align-justify-space-between();
+    margin-bottom: 2rem;
+    h3 {
+      color: $dark-blue;
+      font-size: 3.2rem;
+      font-weight: 600;
+    }
+    &__action {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 1rem;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        // padding: 0.8rem 3.1rem 0.8rem 1.8rem;
+        .btn-icon-box {
+          background-color: $white;
+          color: $dark-blue;
+          padding: 0.8rem 1.2rem;
+          border-radius: 100%;
+          // margin: 0 1.2rem 0 0;
+          i {
+            font-size: 1.75rem;
+            vertical-align: bottom;
+          }
+        }
+      }
+    }
+  }
+  &_wrap {
+    &_list {
+      &-item {
+        background-color: $gray-light;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        &_doc {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          height: 100%;
+          &-icon {
+            background-color: $regulatory-document;
+            padding: 1.5rem 2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            img {
+              width: 10rem;
+              height: auto;
+            }
+          }
+          &-name {
+            margin-left: 2.25rem;
+            padding: 0.6rem 0;
+            &__date {
+              margin-top: 3rem;
+              span {
+                color: $list-light-text;
+                margin-left: 2rem;
+              }
+            }
+            h2 {
+              color: $btn-grey-light;
+              font-weight: 600;
+            }
+            a {
+              color: $btn-link;
+            }
+          }
+        }
+        &_comment {
+          background-color: $white;
+          padding: 1rem 2rem;
+          p {
+            padding-bottom: 0.6rem;
+            border-bottom: 0.5px solid $btn-link;
+          }
+          img {
+            width: 30px;
+          }
+          & > div {
+            gap: 1rem;
+            color: $primary-bg;
+          }
+        }
+      }
+    }
+  }
+}
+// .regulatory-document_wrap {
+// }
+$comment-img-size: 3rem;
+$comment-img-size-sm: 1.75rem;
+.inner-comment_list {
+  .comment-replies {
+    background-color: $body-bg;
+    width: 97%;
+  }
+  .comment {
+    &-img {
+      width: $comment-img-size;
+      height: $comment-img-size;
+    }
+
+    &-replies &-img {
+      width: $comment-img-size-sm;
+      height: $comment-img-size-sm;
+    }
+  }
+}
+
+@include breakpoint("ipad-max") {
+  .regulatory-document {
+    &_title {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+    &_wrap {
+      &_list {
+        &-item {
+          &_doc {
+            &-name {
+              &__date {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+[direction="rtl"] {
+  .regulatory-document_wrap_list-item_doc-name {
+    margin-left: 0;
+    margin-right: 2.25rem;
+  }
+}
+
+[theme-version="dark"] {
+  .regulatory-document {
+    &_title {
+    }
+    &_wrap {
+      &_list {
+        &-item {
+          &_doc {
+            &-name {
+              &__date {
+                color: $dark-light-text;
+                span {
+                  color: $dark-light-text;
+                }
+              }
+            }
+          }
+          background-color: $dark-body-bg;
+          &_comment {
+            background-color: $dark-primary-1;
+            p {
+              border-color: $dark-border-color;
+              color: $dark-light-text;
+            }
+          }
+        }
+      }
+    }
+  }
+  .inner-comment_list {
+    .comment-replies {
+      background-color: $dark-body-bg;
+      color: $navbar-light-color;
+    }
+    .comment {
+      color: $navbar-light-color;
+      .link-dark {
+        color: $dark-light-text;
+      }
+    }
+  }
+}

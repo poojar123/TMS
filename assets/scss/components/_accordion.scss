@@ -1,0 +1,69 @@
+.accordion {
+  .accordion-header {
+    padding: 2.5rem;
+  }
+  .accordion-button {
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0 0 0 4rem;
+    font-size: 2.5rem;
+    color: $accordion-header-color;
+    font-weight: 800;
+    &:focus {
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+    &::after {
+      background-image: url("../img/icon/accordion-plus.svg");
+      height: 2.5rem;
+      width: 2.5rem;
+      background-size: 2.5rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
+    }
+    &:not(.collapsed):after {
+      background-image: url("../img/icon/accordion-minus.svg");
+    }
+  }
+  &-item {
+    margin-bottom: 1rem;
+    border: 0;
+    background-color: $white;
+    &:first-of-type {
+      border-top-left-radius: $accordion-border-radius;
+      border-top-right-radius: $accordion-border-radius;
+    }
+    &:last-child {
+      border-bottom-left-radius: $accordion-border-radius;
+      border-bottom-right-radius: $accordion-border-radius;
+    }
+  }
+  .accordion-body {
+    padding:0 6rem 2rem;
+  }
+}
+@include breakpoint("ipad-max") {
+  .accordion {
+    .accordion-header {
+      padding: 2rem;
+    }
+    .accordion-button {
+      font-size: 1.5rem;
+      padding: 0 0 0 3.5rem;
+      &::after {
+        height: 2.2rem;
+        width: 2.2rem;
+        background-size: 2.2rem;
+      }
+    }
+    .accordion-body {
+      padding: 0 5rem 1rem;
+    }
+  }
+}

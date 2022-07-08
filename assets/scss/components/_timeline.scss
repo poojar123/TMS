@@ -1,0 +1,145 @@
+.timeline_wrap {
+  .timeline {
+    position: relative;
+  }
+
+  .timeline li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    position: relative;
+    text-align: center;
+    z-index: 9;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  ul:nth-child(1) {
+    color: $primary-light-bg;
+  }
+
+  .timeline li:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 3px solid $primary-light-bg;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto 10px auto;
+    background: #fff;
+    color: #000;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+  }
+
+  .timeline li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(1, 7, 96, 0.06);
+    top: 15px;
+    left: -40%;
+    z-index: -9;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .timeline li:first-child:after {
+    content: none;
+  }
+  .timeline li:not(.active-tl) {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .timeline li.active-tl:before {
+    background: $primary-light-bg;
+    color: #f1f1f1;
+  }
+
+  .timeline li.active-tl + li:after {
+    background: $primary-light-bg;
+  }
+}
+
+// 23-06-2022
+.count {
+  border-radius: 90px;
+  padding: 0.9rem 1.455rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: auto;
+  width: auto;
+  line-height: 1;
+}
+
+// header
+.header-tab .nav-link {
+  font-size: 1.8rem;
+}
+// footer
+footer .footer-wrap .footer-logo_container img {
+  height: 6rem;
+}
+footer .footer-wrap .footer-link .navbar-nav .nav-link {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+footer .copyright p {
+  font-size: 1.6rem;
+}
+// list css
+.list-group-basic .list-group-item strong,
+.list-group-basic .list-group-item p {
+  font-size: 2rem;
+}
+
+// data table scrollbar
+.dataTables_scrollBody::-webkit-scrollbar {
+  height: 10px;
+  width: 8px;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-thumb {
+  background: #010760;
+}
+.dataTables_scrollBody::-webkit-scrollbar-track {
+  background-color: #f1f0f6;
+}
+
+.popup-form .card-title {
+  font-size: 2.5rem;
+}
+
+// model
+.modal-content .modal-header .modal-title {
+  line-height: 1.2;
+  font-size: 2.5rem;
+}
+
+// .breadcrumb
+.breadcrumb {
+  border-radius: 0;
+}
+
+// editor changes
+.richText-editor li {
+  list-style: inherit;
+}
+// add class to long text in html table
+.long-table-text {
+  width: 250px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+// html
+// remove navbar-brand class from header logo
+// .long-table-text add class to long text in html 

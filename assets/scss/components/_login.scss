@@ -1,0 +1,96 @@
+.citc-login-register {
+  background: #fff;
+}
+.citc-img-wrap,
+.citc-content-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.citc-img-wrap-mask {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 98, 0.24) 0%,
+    rgba(0, 0, 98, 0) 100%
+  );
+}
+.citc-img-wrap-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("#{$images-path}/web/login-bg.png");
+  z-index: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  transition: background-image 300ms ease-in 200ms;
+}
+
+.citc-img-wrap-back {
+  z-index: 3;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  font-size: 4rem;
+  color: #000062b2;
+}
+.citc-img-wrap-back:hover,
+.citc-img-wrap-back:focus {
+  left: 23px;
+}
+
+.citc-content-wrap-mask {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("#{$images-path}/web/login-input-bg.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.citc-content-wrap-title {
+  margin-bottom: 3rem;
+}
+
+.citc-content-wrap-title h3 {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 0.9);
+}
+.citc-content-wrap-title p {
+  font-weight: 500;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.8rem;
+}
+.forgot-password-link {
+  color: #0000dd;
+}
+
+[direction="rtl"] {
+  .citc-img-wrap-back {
+    right: 25px;
+  }
+  .citc-content-wrap-mask {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+}
